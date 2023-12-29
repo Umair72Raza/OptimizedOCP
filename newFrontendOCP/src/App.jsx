@@ -10,29 +10,29 @@ import {
   Outlet,
 } from "react-router-dom";
 import "./App.css";
-import { HomePage } from "./pages/HomePage";
 import Question from "./components/Question/Question";
-import Quiz from "./components/Quiz/Quiz";
-import Course from "./pages/Course";
-import TeacherPage from "./pages/TeacherPage";
-import CreateCourse from "./forms/CreateCourse";
 import MainBar from "./Mainbar/Mainbar";
-import ViewCourses from "./components/Views/ViewCourses";
-import QuizList from "./components/QuizList/QuizList";
 import QuestionList from "./components/QuestionList/QuestionList";
-import ResultCard from "./components/Card/ResultCard";
 import { jwtDecode } from "jwt-decode";
 import DefaultLayout from "./components/Layouts/DefaultLayout";
 import JoiningPage from "./pages/Joining Page";
 import LoginPage from "./components/LoginPage/LoginPage";
 import SignUp from "./components/SignUp/SignUp";
 import AuthPage from "./pages/AuthPage";
-import StudentsOfCourse from "./components/StudentsOfCourse/StudentsOfCourse";
-import Chat from "./components/Chat/Chat";
-import StudentChat from "./components/StudentChat/StudentChat";
-import StudentCourse from "./pages/StudentCourse";
-import StudentQuizList from "./components/StudentQuizList/StudentQuizList";
-import StudentHomePage from "./pages/StudentHomePage";
+import Chat from "./Views/TeacherViews/Chat/Chat";
+import StudentChat from "./Views/StudentViews/StudentChat/StudentChat";
+import StudentCourse from "./Views/StudentViews/Course/StudentCourse";
+import HomePage from "./Views/TeacherViews/HomePage/HomePage";
+import Course from "./Views/TeacherViews/Course/Course";
+import CreateCourse from "./Views/TeacherViews/forms/CreateCourse";
+import ViewCourses from "./Views/StudentViews/ViewCourse/ViewCourses";
+import StudentsOfCourse from "./Views/StudentViews/StudentsOfCourse/StudentsOfCourse";
+import StudentQuizList from "./Views/StudentViews/StudentQuizList/StudentQuizList";
+import Quiz from "./Views/TeacherViews/Quiz/Quiz";
+import QuizList from "./Views/TeacherViews/QuizList/QuizList";
+import TeacherPage from "./Views/TeacherViews/ViewCourse/TeacherPage";
+import StudentDefaultLayout from "./components/Layouts/StudentDefaultLayout";
+import StudentHomePage from "./Views/StudentViews/StudentHomePage/StudentHomePage";
 
 function App(props) {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -63,6 +63,7 @@ function App(props) {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/AuthPage" element={<AuthPage />} />
           <Route path="/DefaultLayout" element={<DefaultLayout />} />
+          <Route path="/studentDefaultLayout" element={<StudentDefaultLayout />} />
           <Route path="/" element={<JoiningPage />} />
           <Route path="/viewCourse" element={<ViewCourses />} />
 
@@ -135,7 +136,7 @@ function Layout(props) {
   }
 
   const decodedToken = jwtDecode(token);
- // console.log(token);
+  // console.log(token);
 
   const checkTokenExpiration = () => {
     const currentTime = Math.floor(Date.now() / 1000);

@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 import React, { useState } from "react";
-import StudentDetails from "../StudentDetails/StudentsDetails";
+import StudentDetails from "../../Views/StudentViews/StudentDetails/StudentsDetails";
 
 const Cards = (props) => {
   const { title, description, action, getStd } = props;

@@ -6,7 +6,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postQuestion } from "../Store/QuestionReducer";
 import { useLocation, useNavigate } from "react-router-dom";
-import BackButton from "../BackButton/BackButton";
 import DefaultLayout from "../Layouts/DefaultLayout";
 
 const Question = (props) => {
