@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Cards from '../../../components/Card/Cards';
-import StudentDefaultLayout from '../../../components/Layouts/StudentDefaultLayout';
+import DefaultLayout from '../../../components/Layouts/DefaultLayout';
 
 const StudentsOfCourse = () => {
     const location = useLocation();
@@ -42,7 +42,7 @@ const StudentsOfCourse = () => {
 
   return (
     <div>
-        <StudentDefaultLayout>
+        <DefaultLayout>
             <div className='position-relative d-flex flex-column align-items-center overflow-y-auto'>
         <div>
             <button className='greenButton m-4 text-white px-4 py-2 rounded hover:bg-yellow-500 mx-auto flex items-center'
@@ -50,13 +50,13 @@ const StudentsOfCourse = () => {
                 Get students
                 </button>
         </div>
-        <div style={{height:'50vh',paddingBottom:''}} className='d-flex d-sm-flex'>
+        <div style={{height:'50vh',paddingBottom:''}} className='d-flex flex-column d-sm-flex'>
             {buttonClicked?
                 (studentIds.map((studentId)=> <Cards key={studentId} title={studentId} action={"Get Student Details"} getStd={true} />))
             :<></>}
         </div>
         </div>
-        </StudentDefaultLayout>
+        </DefaultLayout>
     </div>
     
   )

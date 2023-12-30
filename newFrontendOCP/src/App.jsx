@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Question from "./components/Question/Question";
-import MainBar from "./Mainbar/Mainbar";
+
 import QuestionList from "./components/QuestionList/QuestionList";
 import { jwtDecode } from "jwt-decode";
 import DefaultLayout from "./components/Layouts/DefaultLayout";
@@ -26,13 +26,14 @@ import HomePage from "./Views/TeacherViews/HomePage/HomePage";
 import Course from "./Views/TeacherViews/Course/Course";
 import CreateCourse from "./Views/TeacherViews/forms/CreateCourse";
 import ViewCourses from "./Views/StudentViews/ViewCourse/ViewCourses";
-import StudentsOfCourse from "./Views/StudentViews/StudentsOfCourse/StudentsOfCourse";
+import StudentsOfCourse from "./Views/TeacherViews/StudentsOfCourse/StudentsOfCourse";
 import StudentQuizList from "./Views/StudentViews/StudentQuizList/StudentQuizList";
 import Quiz from "./Views/TeacherViews/Quiz/Quiz";
 import QuizList from "./Views/TeacherViews/QuizList/QuizList";
 import TeacherPage from "./Views/TeacherViews/ViewCourse/TeacherPage";
 import StudentDefaultLayout from "./components/Layouts/StudentDefaultLayout";
 import StudentHomePage from "./Views/StudentViews/StudentHomePage/StudentHomePage";
+import MainBar from "./Views/TeacherViews/Mainbar/Mainbar";
 
 function App(props) {
   const [isAdmin, setIsAdmin] = useState(false);

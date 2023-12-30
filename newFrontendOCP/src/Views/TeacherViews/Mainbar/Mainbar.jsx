@@ -3,7 +3,7 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 
 import { useState } from "react";
-import BackButton from "../components/BackButton/BackButton";
+import BackButton from "../../../components/BackButton/BackButton";
 
 export const MainBar = (props) => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));

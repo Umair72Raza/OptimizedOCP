@@ -1,6 +1,6 @@
 /*eslint-disable react/prop-types */
+import MainBar from '../../Views/TeacherViews/Mainbar/Mainbar';
 import Footer from '../footer/Footer';
-import MainBar from '../../Mainbar/Mainbar';
 import axios from 'axios';
 
 const DefaultLayout = (props) => {
